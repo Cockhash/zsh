@@ -1,13 +1,38 @@
-# History in cache directory:
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# aliases
+alias po="poweroff"
+# open ~/.zshrc  using the default editor specified in $EDITOR
+alias ec="$EDITOR $HOME/.zshrc"
+# reload ~/.zshrc
+alias sc="source $HOME/.zshrc"
+
+# Custom Variables
+EDITOR=vim
+
+# History
+HISTFILE=~/.cache/zshhistory
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=~/.cache/zshhistory
-setopt appendhistory
 
-# Load aliases and shortcuts if existent.
-[ -f "$HOME/zsh/aliasrc" ] && source "$HOME/zsh/aliasrc"
+# ZSH Bind; vim-like
+bindkey -v
 
-# Load ; should be last.
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename "$HOME/.zshrc"
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# Load; should be at the end
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/share/autojump/autojump.zsh 2>/dev/null
