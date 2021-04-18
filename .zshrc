@@ -7,10 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # aliases
-alias po="poweroff"
-# open ~/.zshrc  using the default editor specified in $EDITOR
-alias ec="$EDITOR $HOME/.zshrc"
-# reload ~/.zshrc
+## reload ~/.zshrc
 alias sc="source $HOME/.zshrc"
 
 # Custom Variables
@@ -35,7 +32,6 @@ compinit
 # Load; should be at the end
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-source /usr/share/autojump/autojump.zsh 2>/dev/null
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
