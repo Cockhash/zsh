@@ -9,11 +9,12 @@ yay -S zsh zsh-syntax-highlighting autojump zsh-autosuggestions
 ```
 
 ## Setup
+Fetch zsh config:
 ```
-touch "$HOME/.cache/zshhistory"
 wget https://raw.githubusercontent.com/cockhash/zsh/main/.zshrc -O ~/.zshrc
-mkdir -p "$HOME/.zsh"
-# Setup Alias in $HOME/zsh/aliasrc
+````
+Setup Alias for powerlevel0k in $HOME/zsh/aliasrc:
+```
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 ```
 
