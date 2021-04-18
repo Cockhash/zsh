@@ -5,7 +5,7 @@ My ZSH Config
 
 ## Get dependencies
 ```
-yay -S zsh zsh-syntax-highlighting autojump zsh-autosuggestions
+paru -S zsh zsh-syntax-highlighting autojump zsh-autosuggestions
 ```
 
 ## Setup
