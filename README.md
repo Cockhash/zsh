@@ -5,21 +5,23 @@ My ZSH Config
 
 ## Get dependencies
 ```
-paru -S zsh zsh-syntax-highlighting zsh-autosuggestions
+$ paru -S zsh zsh-syntax-highlighting zsh-autosuggestions
 ```
 
 ## Setup
 Fetch zsh config:
 ```
-wget https://raw.githubusercontent.com/cockhash/zsh/main/.zshrc -O ~/.zshrc
+$ wget https://raw.githubusercontent.com/cockhash/zsh/main/.zshrc -O ~/.zshrc
 ````
-Setup Alias for powerlevel0k in $HOME/zsh/aliasrc:
+Download powerlevel10k:
 ```
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 ```
 
-Finish the conversion by changing your user in /etc/passwd to /bin/zsh instead of /bin/bash
-or typing chsh $USER and entering /bin/zsh
+Finish the conversion by changing the shel for your user:
+```
+$ sudo chsh -s /bin/zsh <user>
+```
 
 ## Install recommended Font
 https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
